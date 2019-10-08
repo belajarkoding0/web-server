@@ -1,0 +1,36 @@
+Follow the steps below to install Apache HTTP Server:
+
+Step 1:
+
+   - Download Apache HTTP Server version 2.4.16 from Apache Website - (httpd.apache.org)
+   - Unzip the file httpd-2.4.16.tar.gz into /tmp directory (/tmp/httpd-2.4.16)
+   - Download Apache APR and Apache APR Utility (https://apr.apache.org)
+   - Unzip the file apr-1.5.2.tar.gz and rename the directory to apr
+   - Unzip the file apr-util-1.5.4.tar.gz and rename the directory to apr-util
+   - Move apr and apr-util directories into /tmp/httpd-2.4.16/srclib  (/tmp/httpd-2.4.16/srclib/apr  and /tmp/httpd-2.4.16/srclib/apr-util)
+
+Step 2:
+
+   - Navigate to directory /tmp/httpd-2.4.16
+   - Run the command ./configure
+   - If an error message is thrown requesting PCRE, jump to Step 3
+   - Run the command make
+   - Run the command make install
+
+ Step 3: (only necessary if an error message is thrown requesting PCRE when installing Apache)
+
+   - Download PCRE (Perl Compatible Regular Expressions) version 8.36  (http://pcre.org)
+   - Run the command ./configure
+   - Run the command make
+   - Run the command make install
+   - Repeat Step 2
+
+The default Apache installation: /usr/local/apache2
+
+Step 4:
+
+   - Navigate to directory /usr/local/apache2/bin
+   - Run the command ./apachectl start
+   - Open a Web browser and type the machine IP in the address bar and hit Enter
+   
+   The message "It works!" should be seen.
